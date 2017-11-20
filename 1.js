@@ -1,3 +1,7 @@
+function isNumeric(str) {
+	return Number(str) == str;
+}	
+
 function randomNumber(a, b) {
 
 	return Math.floor(Math.random() * (b - a + 1)) + a;
@@ -120,6 +124,14 @@ function checkResult() {
 		return;
 	}	
 	
+	if (!isNumeric(result1)) {
+		for (i = 1; i <= 1000; i++) {
+			 alert("not cool man you stupid you moron");
+		} 
+		
+		return;
+	}
+	
 	result2 = calculate(a, b, operation);
 	
 	if (result1 == result2) {
@@ -134,5 +146,4 @@ function checkResult() {
 	}
 	
 }
-
 
