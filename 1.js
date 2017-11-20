@@ -116,6 +116,10 @@ function checkResult() {
 	b = Number(document.getElementById("n2").innerHTML); 
 	operation = document.getElementById("operation").innerHTML;
 	
+	if (result1 == "") {
+		return;
+	}	
+	
 	result2 = calculate(a, b, operation);
 	
 	if (result1 == result2) {
