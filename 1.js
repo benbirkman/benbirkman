@@ -101,7 +101,12 @@ function randomExercise() {
 	
 	document.getElementById("n1").innerHTML = random1;	
 	document.getElementById("n2").innerHTML = random2;		
-	document.getElementById("operation").innerHTML = operation;			
+	document.getElementById("operation").innerHTML = operation;	
+	document.getElementById("checkresult").disabled = false;
+	document.getElementById("tick").style.display = "none";
+	document.getElementById("result").value = "";
+
+
 }
 
 function checkResult() {
@@ -114,10 +119,16 @@ function checkResult() {
 	result2 = calculate(a, b, operation);
 	
 	if (result1 == result2) {
-		document.getElementById("success").innerHTML = "true";			
+		document.getElementById("tick").style.display = "block";
+		document.getElementById("checkresult").disabled = true;
+			document.getElementById("redx").style.display = "none";
+
 	} else {
-		document.getElementById("success").innerHTML = "false";			
+		document.getElementById("redx").style.display = "block";
+		document.getElementById("tick").style.display = "none";
+
 	}
+	
 }
 
 
