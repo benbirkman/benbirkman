@@ -105,7 +105,11 @@ function randomExercise() {
 
 	
 	random1 = randomNumber(min, max);
-	random2 = randomNumber(min, max);
+	
+	do {	
+		random2 = randomNumber(min, max);
+	} while (random2 == 0 && operation == "/");
+		
 	
 	if (operation == "/") {
 		random1 = random1 * random2;
