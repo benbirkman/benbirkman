@@ -135,12 +135,12 @@ function checkResult() {
 	result2 = calculate(a, b, operation);
 	
 	if (result1 == result2) {
-		document.getElementById("tick").style.display = "";
+		document.getElementById("tick").style.display = "inline";
 		document.getElementById("checkresult").disabled = true;
 			document.getElementById("redx").style.display = "none";
 
 	} else {
-		document.getElementById("redx").style.display = "";
+		document.getElementById("redx").style.display = "inline";
 		document.getElementById("tick").style.display = "none";
 
 	}
