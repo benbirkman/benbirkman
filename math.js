@@ -89,7 +89,6 @@ function calculator() {
 }
 
 function randomExercise() {
-	
 	operation = randomOperation();
 	
 	if (operation == "^") {
@@ -121,6 +120,7 @@ function randomExercise() {
 	document.getElementById("operation").innerHTML = operation;	
 	document.getElementById("checkresult").disabled = false;
 	document.getElementById("tick").style.display = "none";
+	document.getElementById("redx").style.display = "none";
 	document.getElementById("result").value = "";
 
 
@@ -150,7 +150,7 @@ function checkResult() {
 	if (result1 == result2) {
 		document.getElementById("tick").style.display = "inline";
 		document.getElementById("checkresult").disabled = true;
-			document.getElementById("redx").style.display = "none";
+		document.getElementById("redx").style.display = "none";
 
 	} else {
 		document.getElementById("redx").style.display = "inline";
