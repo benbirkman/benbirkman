@@ -126,7 +126,7 @@ function checkResult() {
 	
 	if (!isNumeric(result1)) {
 		for (i = 1; i <= 1000; i++) {
-			 alert("not cool man you stupid you moron");
+			 alert("not cool man you stupid ");
 		} 
 		
 		return;
