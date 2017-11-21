@@ -95,13 +95,22 @@ function randomExercise() {
 	if (operation == "^") {
 		min = 2;
 		max = 16;
+	} else if (operation == "*" || operation == "/") {
+		max = 1000;
+		min = -max;
 	} else {
-		min = -50000;
-		max = -min;
+		max = 50000;
+		min = -max;
 	}
+
 	
 	random1 = randomNumber(min, max);
 	random2 = randomNumber(min, max);
+	
+	if (operation == "/") {
+		random1 = random1 * random2;
+	}
+	
 	
 	document.getElementById("n1").innerHTML = random1;	
 	document.getElementById("n2").innerHTML = random2;		
