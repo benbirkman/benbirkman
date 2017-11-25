@@ -1,0 +1,28 @@
+#coolcircle, #superx {
+	width: 30px;
+	height: 30px;
+}
+
+
+table {
+	
+	border-collapse: collapse;
+}
+
+#middleRow {
+	
+	border-top: 1px double;
+	border-bottom: 1px double;
+}
+
+td {
+	
+	width: 30px;
+	height: 30px;	
+}
+
+.middleColumn {
+	border-left: 1px double;
+	border-right: 1px double;
+
+}
