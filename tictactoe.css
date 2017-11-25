@@ -1,8 +1,3 @@
-#coolcircle, #superx {
-	width: 30px;
-	height: 30px;
-}
-
 
 table {
 	
@@ -16,7 +11,7 @@ table {
 }
 
 td {
-	
+	text-align: center;
 	width: 30px;
 	height: 30px;	
 }
