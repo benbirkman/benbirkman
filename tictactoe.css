@@ -21,3 +21,9 @@ td {
 	border-right: 1px double;
 
 }
+
+#resetTicTacToe  {
+	
+	display: none;	
+	font-size: 50%
+}

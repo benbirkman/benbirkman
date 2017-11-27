@@ -16,10 +16,13 @@ function checkWin() {
 }
  
 function ticTac(elm, location) {
+
 	if (cells[location] != null) {
 		return;
 	}
-	
+	if (checkWin()) {
+		return;	
+	}
 
 	if (firstPlayer) {
 		sign = "X";
@@ -38,6 +41,14 @@ function ticTac(elm, location) {
 	
 	if (checkWin()) {
 		document.getElementById("result").innerHTML = sign + " wins!!! " + otherSign + " is a total loser";
+		document.getElementById("resetTicTacToe").style.display = "inline";
+
 	}
+
+	
+}
+
+function resetTicTacToe() {
+	
 	
 }
