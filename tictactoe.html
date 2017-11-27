@@ -15,21 +15,22 @@
 
 <table>		
   <tr>
-    <td onclick="ticTac(this)"></td>
-    <td onclick="ticTac(this)" class="middleColumn"></td>
-    <td onclick="ticTac(this)"></td>
+    <td onclick="ticTac(this, 'tl')"></td>
+    <td onclick="ticTac(this, 'tm')" class="middleColumn"></td>
+    <td onclick="ticTac(this, 'tr')"></td>
   </tr>
   <tr id="middleRow">
-	<td onclick="ticTac(this)"></td>
-	<td onclick="ticTac(this)" class="middleColumn"></td>
-	<td onclick="ticTac(this)"></td>
+	<td onclick="ticTac(this, 'ml')"></td>
+	<td onclick="ticTac(this, 'mm')" class="middleColumn"></td>
+	<td onclick="ticTac(this, 'mr')"></td>
   </tr>
   <tr>
-	<td onclick="ticTac(this)"></td>
-	<td onclick="ticTac(this)" class="middleColumn"></td>
-	<td onclick="ticTac(this)"></td>
+	<td onclick="ticTac(this, 'bl')"></td>
+	<td onclick="ticTac(this, 'bm')" class="middleColumn"></td>
+	<td onclick="ticTac(this, 'br')"></td>
   </tr>
 </table>
+<div id="result"></div>
 
 
 
