@@ -46,18 +46,17 @@ function clickCell(elm, location) {
 	
 	firstPlayer = !firstPlayer;
 	
-	if (checkWin()) {
-		document.getElementById("result").innerHTML = sign + " wins!!! " + otherSign + " is a total loser";
+	if (checkWin() || checkDraw()) {
+		if (checkDraw()) {
+			 message = "you are both losers!!!";	
+		} else {
+			message = sign + " wins!!! " + otherSign + " is a total loser";
+		}
+		
 		document.getElementById("resetTicTacToe").style.display = "inline";
 		document.getElementById("result").style.display = "block";
-
-	}
-	
-	if (checkDraw()) {
-		document.getElementById("result").innerHTML = "you are both losers!!!";	
-		document.getElementById("resetTicTacToe").style.display = "inline";
-		document.getElementById("result").style.display = "block";
-	}	
+		document.getElementById("result").innerHTML = message;
+	}		
 }
 
 function resetTicTacToe() {
