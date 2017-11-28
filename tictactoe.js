@@ -14,6 +14,11 @@ function checkWin() {
 
 	return tor || mor || bor || lc || mc || rc || db || dt;
 }
+
+function checkDraw() {
+	
+	return cells["tl"] != null && cells["tm"] != null && cells["tr"] != null && cells["ml"] != null && cells["mm"] != null && cells["mr"] != null && cells["bl"] != null && cells["bm"] != null && cells["br"] != null && checkWin() == false;
+}
  
 function ticTac(elm, location) {
 
@@ -41,6 +46,12 @@ function ticTac(elm, location) {
 	
 	if (checkWin()) {
 		document.getElementById("result").innerHTML = sign + " wins!!! " + otherSign + " is a total loser";
+		document.getElementById("resetTicTacToe").style.display = "inline";
+
+	}
+	
+	if (checkDraw()) {
+		document.getElementById("result").innerHTML = "you are both losers!!!";	
 		document.getElementById("resetTicTacToe").style.display = "inline";
 
 	}
