@@ -1,6 +1,8 @@
 
-firstPlayer = true;
-cells = [];
+function init() {
+	firstPlayer = true;
+	cells = [];
+}
 
 function checkWin() {
 	tor = cells["tl"] != null && cells["tl"] == cells["tm"] && cells["tm"] == cells["tr"];
@@ -20,7 +22,7 @@ function checkDraw() {
 	return cells["tl"] != null && cells["tm"] != null && cells["tr"] != null && cells["ml"] != null && cells["mm"] != null && cells["mr"] != null && cells["bl"] != null && cells["bm"] != null && cells["br"] != null && checkWin() == false;
 }
  
-function ticTac(elm, location) {
+function clickCell(elm, location) {
 
 	if (cells[location] != null) {
 		return;
@@ -61,5 +63,5 @@ function ticTac(elm, location) {
 
 function resetTicTacToe() {
 	
-	
+
 }

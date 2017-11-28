@@ -7,7 +7,7 @@
 
 
 </head>
-<body>
+<body onload="init()">
 
 
 
@@ -15,19 +15,19 @@
 
 <table>		
   <tr>
-    <td onclick="ticTac(this, 'tl')"></td>
-    <td onclick="ticTac(this, 'tm')" class="middleColumn"></td>
-    <td onclick="ticTac(this, 'tr')"></td>
+    <td onclick="clickCell(this, 'tl')"></td>
+    <td onclick="clickCell(this, 'tm')" class="middleColumn"></td>
+    <td onclick="clickCell(this, 'tr')"></td>
   </tr>
   <tr id="middleRow">
-	<td onclick="ticTac(this, 'ml')"></td>
-	<td onclick="ticTac(this, 'mm')" class="middleColumn"></td>
-	<td onclick="ticTac(this, 'mr')"></td>
+	<td onclick="clickCell(this, 'ml')"></td>
+	<td onclick="clickCell(this, 'mm')" class="middleColumn"></td>
+	<td onclick="clickCell(this, 'mr')"></td>
   </tr>
   <tr>
-	<td onclick="ticTac(this, 'bl')"></td>
-	<td onclick="ticTac(this, 'bm')" class="middleColumn"></td>
-	<td onclick="ticTac(this, 'br')"></td>
+	<td onclick="clickCell(this, 'bl')"></td>
+	<td onclick="clickCell(this, 'bm')" class="middleColumn"></td>
+	<td onclick="clickCell(this, 'br')"></td>
   </tr>
 </table>
 <br/>
