@@ -49,19 +49,26 @@ function clickCell(elm, location) {
 	if (checkWin()) {
 		document.getElementById("result").innerHTML = sign + " wins!!! " + otherSign + " is a total loser";
 		document.getElementById("resetTicTacToe").style.display = "inline";
+		document.getElementById("result").style.display = "block";
 
 	}
 	
 	if (checkDraw()) {
 		document.getElementById("result").innerHTML = "you are both losers!!!";	
 		document.getElementById("resetTicTacToe").style.display = "inline";
-
-	}
-
-	
+		document.getElementById("result").style.display = "block";
+	}	
 }
 
 function resetTicTacToe() {
 	
+	init();
+	document.getElementById("resetTicTacToe").style.display = "none";
+	document.getElementById("result").style.display = "none";
+	
+	tds = document.getElementsByTagName("td");	
+	for (i = 0; i < tds.length; i++) {  
+		tds[i].innerHTML = "";
+	}
 
 }
