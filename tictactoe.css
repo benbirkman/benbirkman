@@ -1,19 +1,14 @@
-
 table {
 	
 	border-collapse: collapse;
 }
 
-#middleRow {
-	
-	border-top: 1px double;
-	border-bottom: 1px double;
-}
+
 
 td {
 	text-align: center;
-	width: 30px;
-	height: 30px;	
+	width: 150px;
+	height: 150px;	
 }
 
 .middleColumn {
@@ -22,8 +17,23 @@ td {
 
 }
 
-#resetTicTacToe  {
+img {
+
+	width: 150px;
+	height: 150px;
+}
+#resetTicTacToe, #result  {
 	
 	display: none;	
-	font-size: 50%
+	font-size: 200%
 }
+
+#middleRow {
+	
+	border-top: 1px double;
+	border-bottom: 1px double;
+}
+
+
+	
+	
