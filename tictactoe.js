@@ -32,7 +32,7 @@ function clickCell(elm, location) {
 	}
 
 	cells[location] = firstPlayer;
-	drawSign(elm, firstPlayer);
+	drawPlayer(elm, firstPlayer);
 	
 	if (checkWin() || checkDraw()) {
 		if (checkDraw()) {
@@ -62,13 +62,16 @@ function resetTicTacToe() {
 
 }
 
-function drawSign(elm, firstPlayer) {
+function drawPlayer(elm, firstPlayer) {
 	
 	if (firstPlayer) {
-		elm.innerHTML = "XXXXX";
+		name = "fangs";
 	} else {
-		elm.innerHTML = "circle";
+		name = "werewolf";
 	}
+	
+	elm.innerHTML = '<img src="img/' + name + '.jpg"/>';
+
 }
 
 function winnerMessage(firstPlayer) {
