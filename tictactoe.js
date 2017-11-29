@@ -41,7 +41,7 @@ function clickCell(elm, location) {
 	}
 	
 	cells[location] = sign;
-	elm.innerHTML = sign;
+	drawSign(elm, sign);
 	
 	
 	firstPlayer = !firstPlayer;
@@ -50,7 +50,7 @@ function clickCell(elm, location) {
 		if (checkDraw()) {
 			 message = "you are both losers!!!";	
 		} else {
-			message = sign + " wins!!! " + otherSign + " is a total loser";
+			message = winnerMessage(sign, otherSign);
 		}
 		
 		document.getElementById("resetTicTacToe").style.display = "inline";
@@ -70,4 +70,24 @@ function resetTicTacToe() {
 		tds[i].innerHTML = "";
 	}
 
+}
+
+function drawSign(elm, sign) {
+	
+	if (sign == "X") {
+		elm.innerHTML = "EX";
+	} else {
+		elm.innerHTML = "circle";
+	}
+}
+
+function winnerMessage(sign, otherSign) {
+	
+	if (sign == "X") {
+		return "first player won!!!";
+	} else {
+		return "second player won!!!";
+	}
+	
+	//return sign + " wins!!! " + otherSign + " is a total loser";	
 }
