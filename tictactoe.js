@@ -1,6 +1,6 @@
 
 function init() {
-	firstPlayer = true;
+	isFirst = true;
 	cells = [];
 }
 
@@ -31,14 +31,14 @@ function clickCell(elm, location) {
 		return;	
 	}
 
-	cells[location] = firstPlayer;
-	drawPlayer(elm, firstPlayer);
+	cells[location] = isFirst;
+	drawPlayer(elm, isFirst);
 	
 	if (checkWin() || checkDraw()) {
 		if (checkDraw()) {
 			 message = "you are both losers!!!";	
 		} else {
-			message = winnerMessage(firstPlayer);
+			message = winnerMessage(isFirst);
 		}
 		
 		document.getElementById("resetTicTacToe").style.display = "inline";
@@ -46,7 +46,7 @@ function clickCell(elm, location) {
 		document.getElementById("result").innerHTML = message;
 	}	
 
-	firstPlayer = !firstPlayer;
+	isFirst = !isFirst;
 }
 
 function resetTicTacToe() {
@@ -62,9 +62,9 @@ function resetTicTacToe() {
 
 }
 
-function drawPlayer(elm, firstPlayer) {
+function drawPlayer(elm, isFirst) {
 	
-	if (firstPlayer) {
+	if (isFirst) {
 		name = "fangs";
 	} else {
 		name = "werewolf";
@@ -74,13 +74,23 @@ function drawPlayer(elm, firstPlayer) {
 
 }
 
-function winnerMessage(firstPlayer) {
+function winnerMessage(isFirst) {
 	
-	if (firstPlayer) {
+	if (isFirst) {
 		return "first player won!!!";
 	} else {
 		return "second player won!!!";
 	}
 }
+
+
+function selectSkin() {
+    if (document.getElementById("mySelect").value == "1") {
+		alert("you choose X vs O");	
+		
+	}
+	
+}
+
 
 
