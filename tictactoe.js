@@ -2,6 +2,7 @@
 function init() {
 	isFirst = true;
 	cells = [];
+	selectSkin();
 }
 
 function checkWin() {
@@ -62,15 +63,21 @@ function resetTicTacToe() {
 
 }
 
+
+function getPlayer() {
+	
+	
+}
+
 function drawPlayer(elm, isFirst) {
 	
 	if (isFirst) {
-		name = "fangs";
+		name = firstImage;
 	} else {
-		name = "werewolf";
+		name = secondImage;
 	}
 	
-	elm.innerHTML = '<img src="img/' + name + '.jpg"/>';
+	elm.innerHTML = '<img src="img/' + name + '"/>';
 
 }
 
@@ -85,9 +92,30 @@ function winnerMessage(isFirst) {
 
 
 function selectSkin() {
-    if (document.getElementById("mySelect").value == "1") {
-		alert("you choose X vs O");	
-		
+	option = document.getElementById("mySelect").value;
+	
+    if (option == "1") {
+	
+		firstImage = "redx.png";
+		secondImage = "circle.png";
+	}
+	
+	if (option == "2") {
+	
+		firstImage = "fangs.jpg";
+		secondImage = "werewolf.jpg";
+	}
+	
+    if (option == "3") {
+
+		firstImage = "redx.png";
+		secondImage = "circle.png";
+	}
+	
+    if (option == "4") {
+	
+		firstImage = "redx.png";
+		secondImage = "circle.png";
 	}
 	
 }
