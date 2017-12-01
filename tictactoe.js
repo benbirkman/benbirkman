@@ -94,30 +94,24 @@ function winnerMessage(isFirst) {
 function selectSkin() {
 	option = document.getElementById("mySelect").value;
 	
-    if (option == "1") {
-	
-		firstImage = "redx.png";
-		secondImage = "circle.png";
+	switch (option) {
+		case "1": 
+			firstImage = "redx.png";
+			secondImage = "circle.png";
+			break;
+		case "2":
+			firstImage = "fangs.jpg";
+			secondImage = "werewolf.jpg";
+			break;
+		case "3":
+			firstImage = "redx.png";
+			secondImage = "circle.png";
+			break;
+		case "4": 
+			firstImage = "redx.png";
+			secondImage = "circle.png";
+			break;		
 	}
-	
-	if (option == "2") {
-	
-		firstImage = "fangs.jpg";
-		secondImage = "werewolf.jpg";
-	}
-	
-    if (option == "3") {
-
-		firstImage = "redx.png";
-		secondImage = "circle.png";
-	}
-	
-    if (option == "4") {
-	
-		firstImage = "redx.png";
-		secondImage = "circle.png";
-	}
-	
 }
 
 
